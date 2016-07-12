@@ -57,9 +57,6 @@
   newNormal = "green bold"
   newHighlight = "green bold 22"
 
-[credential]
-  helper = osxkeychain
-
 [grep]
   lineNumber = true
 

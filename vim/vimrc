@@ -73,7 +73,6 @@ set smartcase
 
 syntax on
 set cursorline
-set background=dark
 highlight clear SignColumn
 
 " Scrolling
