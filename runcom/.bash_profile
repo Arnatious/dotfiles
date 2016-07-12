@@ -2,6 +2,13 @@
 
 [ -z "$PS1" ] && return
 
+# OS
+
+if [ "$(uname -s)" = "Darwin" ]; then
+  OS="OSX"
+else
+  OS=$(uname -s)
+fi
 
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
@@ -20,7 +27,7 @@ fi
 
 # Finally we can source the dotfiles (order matters)
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,custom}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,rvm,custom}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
