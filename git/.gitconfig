@@ -49,7 +49,7 @@
   new = green bold
 [color "status"]
   added = yellow
-  changed = green
+  changed = red
   untracked = cyan
 [color "diff-highlight"]
   oldNormal = "red bold"
