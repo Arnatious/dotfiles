@@ -11,6 +11,7 @@ set autoread                    "Reload files changed outside vim
 set laststatus=2                "Always display the status line
 set hidden                      "Hide buffer instead of closing it
 set pastetoggle=<F2>            "Paste without being smart
+set mouse=a
 
 " Key mappings
 
