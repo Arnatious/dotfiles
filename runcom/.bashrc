@@ -31,12 +31,6 @@ for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,compl
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
-if [ "$OS" = "OSX" ]; then
-  for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}.osx; do
-    [ -f "$DOTFILE" ] && . "$DOTFILE"
-  done
-fi
-
 # Set LSCOLORS
 
 eval "$(dircolors "$DOTFILES_DIR"/system/.dir_colors)"
