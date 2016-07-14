@@ -1,2 +1,4 @@
 system/.custom
 bin/subl
+atom/packages/build
+atom/compile/cache
