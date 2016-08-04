@@ -54,3 +54,5 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 export OS DOTFILES_DIR EXTRA_DIR
 
 source /opt/ros/indigo/setup.bash
+
+source ~/workspace/devel/setup.bash
