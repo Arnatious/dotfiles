@@ -3,3 +3,9 @@ bin/subl
 atom/packages/build
 atom/compile/cache
 atom/compile-cache/
+atom/.apm/
+atom/.node-gyp/
+atom/blob-store/
+atom/config.cson
+atom/packages/
+atom/storage/
