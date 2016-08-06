@@ -59,6 +59,6 @@ then
   source ~/workspace/devel/setup.bash &> /dev/null
 fi
 
-source atom/backup.sh
+source ~/.atom/backup.sh
 
 return 0
