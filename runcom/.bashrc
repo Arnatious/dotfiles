@@ -53,6 +53,12 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 
 export OS DOTFILES_DIR EXTRA_DIR
 
-source /opt/ros/indigo/setup.bash
+if [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -ne 0 ];
+then
+  source /opt/ros/indigo/setup.bash &> /dev/null
+  source ~/workspace/devel/setup.bash &> /dev/null
+fi
 
-source ~/workspace/devel/setup.bash
+source atom/backup.sh
+
+return 0
