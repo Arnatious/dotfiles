@@ -59,6 +59,4 @@ then
   source ~/workspace/devel/setup.bash &> /dev/null
 fi
 
-/bin/bash ~/.atom/backup.sh
-
 return 0
