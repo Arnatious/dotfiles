@@ -14,6 +14,6 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
 
 
-source install.sh
+/bin/bash install.sh
 
 echo "TIME FOR REBOOT"
