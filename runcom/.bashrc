@@ -49,10 +49,9 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 
 export OS DOTFILES_DIR EXTRA_DIR
 
-if [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -ne 0 ];
+if [ -d "/opt/ros" ];
 then
   source /opt/ros/indigo/setup.bash &> /dev/null
   source ~/workspace/devel/setup.bash &> /dev/null
 fi
 
-return 0
