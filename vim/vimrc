@@ -105,3 +105,11 @@ let g:ctrlp_show_hidden=1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 6
 
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+
+call plug#end();
