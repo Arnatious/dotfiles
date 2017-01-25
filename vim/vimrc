@@ -112,4 +112,4 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 
-call plug#end();
+call plug#end()
