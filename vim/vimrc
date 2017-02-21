@@ -85,7 +85,7 @@ set sidescroll=1
 " Completion
 
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildmode=list:longest
+set wildmode=list:longest,list
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
