@@ -58,3 +58,9 @@ if dpkg --get-selections | grep -q "^python-catkin-tools[[:space:]]*install$" >/
 then
   source `catkin locate --shell-verbs`
 fi
+
+#msys colors
+source  $DOTFILES_DIR/mintty-colors-solarized/mintty-solarized-dark.sh
+
+#ssh-pageant
+eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME") &> /dev/null
