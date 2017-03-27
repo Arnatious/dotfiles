@@ -5,6 +5,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'valloric/youcompleteme'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -117,3 +123,5 @@ let g:ctrlp_show_hidden=1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 6
 
+" Airline-Theme
+let g:airline_theme='solarized'
