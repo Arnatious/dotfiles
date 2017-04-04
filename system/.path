@@ -3,6 +3,9 @@
 
 is-executable getconf && PATH=$(command -v getconf PATH)
 
+# Setup GOPATH
+export GOPATH=$HOME/go
+
 # Prepend new items to path (if directory exists)
 
 prepend-path "/bin"
