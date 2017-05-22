@@ -1,7 +1,3 @@
-if hash keychain 2>/dev/null; then
-  keychain &> /dev/null
-fi
-
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+if [ -f $HOME/.bashrc ]; then
+   . $HOME/.bashrc
 fi
