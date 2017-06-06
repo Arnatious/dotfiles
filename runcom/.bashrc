@@ -49,9 +49,12 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 
 export OS DOTFILES_DIR EXTRA_DIR
 
-if [ -d "/opt/ros" ];
+if [ -e "/opt/ros/indigo/setup.bash" ];
 then
-  source /opt/ros/indigo/setup.bash &> /dev/null
-  source ~/workspace/devel/setup.bash &> /dev/null
+  source /opt/ros/indigo/setup.bash
+fi
+if [ -e "~/workspace/devel/setup.bash" ];
+then
+  source ~/workspace/devel/setup.bash
 fi
 
