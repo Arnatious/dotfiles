@@ -23,3 +23,4 @@ ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
 
 mkdir -p ~/.vim/autoload
 ln -sfv "$DOTFILES_DIR/vim/plug.vim" ~/.vim/autoload
+mkdir -p ~/.vim/plugged

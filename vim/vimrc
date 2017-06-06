@@ -93,7 +93,6 @@ syntax on
 set cursorline
 highlight clear SignColumn
 set background=dark
-colorscheme solarized
 
 " Scrolling
 
@@ -126,3 +125,6 @@ let g:ctrlp_max_depth = 6
 
 " Airline-Theme
 let g:airline_theme='solarized'
+
+" Overall Theme
+colorscheme solarized
