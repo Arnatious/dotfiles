@@ -1,3 +1,4 @@
+#!/bin/bash
 # If not running interactively, don't do anything
 
 [ -z "$PS1" ] && return
@@ -53,8 +54,7 @@ if [ -e "/opt/ros/indigo/setup.bash" ];
 then
   source /opt/ros/indigo/setup.bash
 fi
-if [ -e "~/workspace/devel/setup.bash" ];
+if [ -e "$HOME/workspace/devel/setup.bash" ];
 then
-  source ~/workspace/devel/setup.bash
+  source $HOME/workspace/devel/setup.bash
 fi
-

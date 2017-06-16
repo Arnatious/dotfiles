@@ -8,10 +8,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'valloric/youcompleteme'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -122,9 +122,20 @@ set wildignore+=.git,.hg,.bzr,.svn
 let g:ctrlp_show_hidden=1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 6
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " Airline-Theme
 let g:airline_theme='solarized'
 
+" Nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-x> :NERDTreeToggle<CR>
+
+" Clang-format
+map <C-K> :pyf ~/.clang-format.py<cr>
+imap <C-K> :pyf ~/.clang-format.py<cr>
+
 " Overall Theme
 colorscheme solarized
+set t_Co=16
