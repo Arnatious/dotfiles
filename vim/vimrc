@@ -24,7 +24,6 @@ set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set laststatus=2                "Always display the status line
@@ -39,15 +38,10 @@ set ttymouse=xterm2
 let mapleader=","
 nnoremap ; :                        " Use ; over : for commands
 nnoremap <leader><space> :noh<cr>   " Clear search highlighting with ,<space>
-nnoremap <tab> :bnext<cr>           " Tab to next buffer
-nnoremap <s-tab> :bprevious<cr>     " Shift-tab to previous buffer
-nnoremap <leader><leader> <C-^>     " Switch between last two buffers
 
 " Swap file and backups
 
-set noswapfile
 set nobackup
-set nowb
 au FocusLost * :wa
 
 " Persistent undo
@@ -128,8 +122,13 @@ let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 6
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
+
 " Airline-Theme
 let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -145,6 +144,7 @@ imap <C-K> <c-o>:ClangFormat<cr>
 " Syntastic
 let g:syntastic_cpp_clang_tidy_post_args = ""
 let g:syntastic_cpp_checkers = ["clang_tidy"]
+let g:syntastic_cpp_clang_tidy_exec = "/usr/bin/clang-tidy-4.0"
 
 " Overall Theme
 colorscheme solarized
