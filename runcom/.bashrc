@@ -54,7 +54,7 @@ if [ -e "/opt/ros/indigo/setup.bash" ];
 then
   source /opt/ros/indigo/setup.bash
 fi
-if [ -e "$HOME/workspace/devel/setup.bash" ];
+if dpkg --get-selections | grep -q "^python-catkin-tools[[:space:]]*install$" >/dev/null;
 then
-  source $HOME/workspace/devel/setup.bash
+  source `catkin locate --shell-verbs`
 fi
