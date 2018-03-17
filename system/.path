@@ -19,6 +19,7 @@ prepend-path "/usr/local/sbin"
 prepend-path "$GOPATH/bin"
 prepend-path "$GOPATH"
 prepend-path "/usr/local/go/bin"
+prepend-path "$HOME/.vim/plugged/vim-superman/bin"
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755

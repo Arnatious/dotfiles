@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rhysd/vim-clang-format'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'jez/vim-superman'
 
 call plug#end()
 
@@ -36,6 +37,7 @@ set pastetoggle=<F2>            "Paste without being smart
 set clipboard=unnamedplus
 set mouse=a
 set ttymouse=xterm2
+set t_RV=
 
 " Key mappings
 
@@ -136,16 +138,21 @@ let g:airline_solarized_bg='dark'
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-x> :NERDTreeToggle<CR>
 
 " Clang-format
 let g:clang_format#command = "clang-format-4.0"
-map <C-K> :ClangFormat<cr>
-imap <C-K> <c-o>:ClangFormat<cr>
-
+map <C-h> :ClangFormat<cr>
+imap <C-h> <c-o>:ClangFormat<cr>
 
 " Overall Theme
 colorscheme solarized
 set t_Co=16
+
+if has("gui_running")
+  set guifont=Roboto\ Mono\ for\ Powerline\ 12
+endif
+
+" Pager-goodness
+runtime ftplugin/man.vim
