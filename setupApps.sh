@@ -5,13 +5,6 @@ sudo apt-get upgrade
 sudo apt-get install -y vim gitk tmux python3-dev python3-pip
 sudo apt-get install -y screen wget curl
 mkdir /tmp/packs
-#
-# Get Vivaldi
-#
-if ! dpkg --get-selections | grep -q "^vivaldi-stable[[:space:]]*install$" >/dev/null; then
-  wget https://downloads.vivaldi.com/stable/vivaldi-stable_1.7.735.46-1_amd64.deb -O /tmp/packs/vivaldi.deb
-  sudo dpkg -i /tmp/packs/vivaldi.deb
-fi
 
 #
 # Get Go
