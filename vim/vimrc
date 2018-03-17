@@ -15,7 +15,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rhysd/vim-clang-format'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -146,10 +145,6 @@ let g:clang_format#command = "clang-format-4.0"
 map <C-K> :ClangFormat<cr>
 imap <C-K> <c-o>:ClangFormat<cr>
 
-" Syntastic
-let g:syntastic_cpp_clang_tidy_post_args = ""
-let g:syntastic_cpp_checkers = ["clang_tidy"]
-let g:syntastic_cpp_clang_tidy_exec = "/usr/bin/clang-tidy-4.0"
 
 " Overall Theme
 colorscheme solarized
