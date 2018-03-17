@@ -20,3 +20,6 @@ ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
+
+# Install Vim plugins
+vim +PlugInstall +qall
