@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rhysd/vim-clang-format'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rkitover/vimpager'
 
 call plug#end()
 

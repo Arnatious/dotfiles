@@ -19,6 +19,7 @@ ln -sfv "$DOTFILES_DIR/system/.dir_colors" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
+ln -sfv "$DOTFILES_DIR/vim/.vimpagerrc" ~
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
 
 # Install Vim plugins
