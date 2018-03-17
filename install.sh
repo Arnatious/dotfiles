@@ -20,7 +20,3 @@ ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
-
-mkdir -p ~/.vim/autoload
-ln -sfv "$DOTFILES_DIR/vim/plug.vim" ~/.vim/autoload
-mkdir -p ~/.vim/plugged
