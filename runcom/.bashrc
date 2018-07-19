@@ -49,8 +49,3 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
 # Export
 
 export OS DOTFILES_DIR EXTRA_DIR
-
-if dpkg --get-selections | grep -q "^python-catkin-tools[[:space:]]*install$" >/dev/null;
-then
-  source `catkin locate --shell-verbs`
-fi
