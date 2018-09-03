@@ -44,7 +44,7 @@
   autocorrect = 1
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [mergetool]
   prompt = false
@@ -55,3 +55,5 @@
 [fetch]
   prune = true
 
+[diff]
+	tool = vimdiff
