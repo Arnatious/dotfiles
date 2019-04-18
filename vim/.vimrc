@@ -147,7 +147,6 @@ imap <C-K> <c-o>:ClangFormat<cr>
 
 
 " Overall Theme
-silent! colorscheme solarized
 set t_Co=16
 
 if has("gui_running")
