@@ -31,8 +31,7 @@
   show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
   ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-
-[pager]
+  pushf = push --force-with-lease
 
 [color]
   ui = auto
@@ -44,7 +43,7 @@
   autocorrect = 1
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [mergetool]
   prompt = false
@@ -56,4 +55,8 @@
   prune = true
 
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+
+[status]
+  submoduleSummary = true
+
