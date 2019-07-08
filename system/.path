@@ -1,7 +1,11 @@
 # Start with system path
 # Retrieve it from getconf, otherwise it's just current $PATH
 
-is-executable getconf && PATH=$(command -v getconf PATH)
+read var </proc/version
+if [[ $var != *"Microsoft"* ]]; then
+  echo TEST
+  is-executable getconf && PATH=$(command -v getconf PATH)
+fi
 
 # Setup GOPATH
 export GOPATH=$HOME/go
