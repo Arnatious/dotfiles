@@ -3,12 +3,8 @@
 
 read var </proc/version
 if [[ $var != *"Microsoft"* ]]; then
-  echo TEST
   is-executable getconf && PATH=$(command -v getconf PATH)
 fi
-
-# Setup GOPATH
-export GOPATH=$HOME/go
 
 # Prepend new items to path (if directory exists)
 
@@ -20,9 +16,7 @@ prepend-path "$HOME/bin"
 prepend-path "/sbin"
 prepend-path "/usr/sbin"
 prepend-path "/usr/local/sbin"
-prepend-path "$GOPATH/bin"
-prepend-path "$GOPATH"
-prepend-path "/usr/local/go/bin"
+prepend-path "/snap/bin"
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
