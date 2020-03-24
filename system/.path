@@ -1,11 +1,4 @@
 # Start with system path
-# Retrieve it from getconf, otherwise it's just current $PATH
-
-read var </proc/version
-if [[ $var != *"Microsoft"* ]]; then
-  is-executable getconf && PATH=$(command -v getconf PATH)
-fi
-
 # Prepend new items to path (if directory exists)
 
 prepend-path "/bin"
@@ -21,8 +14,21 @@ prepend-path "/.local/bin"
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
+# Changed to use loop - ~4x faster than awk
 
-PATH=`echo -n $PATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}'`
+if [ -n "$PATH" ]; then
+  old_PATH=$PATH:; PATH=
+  while [ -n "$old_PATH" ]; do
+    x=${old_PATH%%:*}       # the first remaining entry
+    case $PATH: in
+      *:"$x":*) ;;          # already there
+      *) PATH=$PATH:$x;;    # not there yet
+    esac
+    old_PATH=${old_PATH#*:}
+  done
+  PATH=${PATH#:}
+  unset old_PATH x
+fi
 
 # Wrap up
 
