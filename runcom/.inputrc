@@ -1,3 +1,8 @@
+$include /etc/inputrc
+
+# Use vim keybindings
+set -o vi
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
@@ -15,6 +20,9 @@ set completion-query-items 200
 
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
+
+# Show completions using LS_COLORS
+set colored-stats on
 
 # Be more intelligent when autocompleting by also looking at the text after
 # the cursor. For example, when the current line is "cd ~/src/mozil", and

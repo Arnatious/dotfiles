@@ -49,13 +49,11 @@ alias treed="tree -d"
 alias tree1="tree -d -L 1"
 alias tree2="tree -d -L 2"
 
-alias cpwd='pwd|tr -d "\n"|pbcopy'
+alias cpwd='pwd|tr -d "\n"|xsel -b'
 
 # rsync
 
 alias rsync="rsync -vh"
-
-# npm
 
 # Network
 

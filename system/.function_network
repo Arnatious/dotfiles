@@ -5,7 +5,7 @@ srv() {
   if [ "$PORT" -le "1024" ]; then
     sudo -v
   fi
-  http-server . -p "$PORT" -c-1
+  python3 -m http.server -p "$PORT"
 }
 
 # Get IP from hostname
