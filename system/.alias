@@ -6,6 +6,7 @@ alias v="vim"
 alias rr="rm -rf"
 alias json="json -c"
 alias e="emacs -nw"
+alias x="gio trash"
 
 is-executable hub && eval "$(hub alias -s)" # alias git=hub
 
@@ -30,11 +31,11 @@ LS_TIMESTYLEISO=`is-supported "ls --time-style=long-iso" --time-style=long-iso`
 LS_GROUPDIRSFIRST=`is-supported "ls --group-directories-first" --group-directories-first`
 
 alias l="ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
-alias ls="ls $LS_COLORS"
 alias ll="ls -lA $LS_COLORS"
 alias lt="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ld="ls -ld $LS_COLORS */"
 alias la="ls -a"
+alias lsc="ls $LS_COLORS"
 
 unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
 
@@ -44,16 +45,12 @@ alias ....="cd ../../.."
 alias -- -="cd -"                  # Go to previous dir with -
 alias cd.='cd $(readlink -f .)'    # Go to real dir (i.e. if current dir is linked)
 
-alias tree="tree -A"
+alias treea="tree -A"
 alias treed="tree -d"
 alias tree1="tree -d -L 1"
 alias tree2="tree -d -L 2"
 
 alias cpwd='pwd|tr -d "\n"|xsel -b'
-
-# rsync
-
-alias rsync="rsync -vh"
 
 # Network
 
