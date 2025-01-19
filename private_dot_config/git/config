@@ -1,0 +1,62 @@
+[user]
+  name = Ted Kern
+  email = arnatious@gmail.com
+
+[github]
+  user = Arnatious
+
+[core]
+  excludesfile = $XDG_CONFIG_HOME/git/.gitignore_global
+  editor = vim
+  filemode = false
+  trustctime = false
+
+[alias]
+  st = status
+  sts = status -sb
+  stl = ls-files -m -o --exclude-standard
+  ci = commit
+  br = branch
+  co = checkout
+  cr = clone --recursive
+  df = diff --word-diff
+  unstage = reset --hard HEAD
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll = log --pretty=oneline --graph --abbrev-commit
+  lm = log --pretty=format:'* %s (%h)'
+  lg = log -p
+  g = grep --break --heading --line-number
+  amend = commit --amend --reuse-message=HEAD
+  contrib = shortlog --summary --numbered
+  show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
+  ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
+  pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  pushf = push --force-with-lease
+
+[color]
+  ui = auto
+
+[grep]
+  lineNumber = true
+
+[help]
+  autocorrect = 1
+
+[difftool]
+  prompt = false
+
+[mergetool]
+  prompt = false
+
+[push]
+  default = simple
+
+[fetch]
+  prune = true
+
+[diff]
+  tool = vimdiff
+
+[status]
+  submoduleSummary = true
+
