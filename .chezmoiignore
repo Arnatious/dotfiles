@@ -1,1 +1,2 @@
 .oh-my-zsh/cache/*
+.omz_custom/powerlevel10k/**/*.zwc
