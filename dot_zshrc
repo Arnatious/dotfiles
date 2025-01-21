@@ -1,7 +1,7 @@
 setopt extended_glob
 
 # Keyring can prompt so goes first
-if [[ $+commands[keyring] ]]; then
+if [[ $+commands[keychain] ]]; then
     eval `keychain --eval --agents ssh --quiet ~/.ssh/id_^*((.pub))(#q.)`
 fi
 
