@@ -145,8 +145,19 @@ imap <C-K> <c-o>:ClangFormat<cr>
 
 
 " Overall Theme
-set t_Co=16
+set t_Co=256
 
 if has("gui_running")
   set guifont=Roboto\ Mono\ for\ Powerline\ 12
+endif
+
+" Windows terminal
+" Note: This should be set after `set termguicolors` or `set t_Co=256`.
+if &term =~ 'xterm' || &term == 'win32'
+  " Use DECSCUSR escape sequences
+  let &t_SI = "\e[5 q"    " blink bar
+  let &t_SR = "\e[3 q"    " blink underline
+  let &t_EI = "\e[1 q"    " blink block
+  let &t_ti ..= "\e[1 q"  " blink block
+  let &t_te ..= "\e[0 q"  " default (depends on terminal, normally blink block)
 endif
